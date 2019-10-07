@@ -42,13 +42,13 @@ type Invoice struct {
 	Total   float64 `json:"total,omitempty"`   //Total
 	Balance float64 `json:"balance,omitempty"` //Balance owed
 
-	Tags       []string               `json:"tags,omitempty"`        //Invoice tags
-	Url        string                 `json:"url,omitempty"`         //URL to view the invoice in the billing portal
-	PaymentUrl string                 `json:"payment_url,omitempty"` //URL for the invoice payment page
-	PdfUrl     string                 `json:"pdf_url,omitempty"`     //URL to download the invoice as a PDF
-	CreatedAt  int64                  `json:"created_at,omitempty"`  //Timestamp when created
-	MetaData   map[string]interface{} `json:"metadata,omitempty"`    //A hash of key/value pairs that can store additional information about this object.
-
+	Tags           []string               `json:"tags,omitempty"`        //Invoice tags
+	Url            string                 `json:"url,omitempty"`         //URL to view the invoice in the billing portal
+	PaymentUrl     string                 `json:"payment_url,omitempty"` //URL for the invoice payment page
+	PdfUrl         string                 `json:"pdf_url,omitempty"`     //URL to download the invoice as a PDF
+	CreatedAt      int64                  `json:"created_at,omitempty"`  //Timestamp when created
+	MetaData       map[string]interface{} `json:"metadata,omitempty"`    //A hash of key/value pairs that can store additional information about this object.
+	CalculateTaxes bool                   `json:"calculate_taxes,omitempty"`
 	// add disabled payment methods
 }
 
